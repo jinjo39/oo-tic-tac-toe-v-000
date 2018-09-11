@@ -54,7 +54,7 @@ def display_board
     puts "Please enter 1-9:"
     index = gets.strip
   end
-    char = current_player
+    player = current_player
     move(index, player = "X")
     display_board
 end
