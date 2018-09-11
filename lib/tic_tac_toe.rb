@@ -120,7 +120,7 @@ end
       turn
     end
       if won?
-        puts "Congratulations #{winner(board)}!"
+        puts "Congratulations #{winner}!"
       elsif draw?
         puts "Cats Game!"
       end
