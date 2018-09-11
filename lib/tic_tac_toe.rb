@@ -46,4 +46,24 @@ def display_board
       return false
     end
   end
+
+  def turn
+  puts "Please enter 1-9:"
+  index = gets.strip
+  until valid_move?(index)
+    puts "Please enter 1-9:"
+    index = gets.strip
+  end
+    char = current_player
+    move(index, player = "X")
+    display_board
+end
+
+  def current_player
+    turn_count % 2 == 0 ? "X" : "O"
+  end
+
+  def turn_count
+    @board.count{|token| token == "X" || token == "O"}
+  end
 end
