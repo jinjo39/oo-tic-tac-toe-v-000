@@ -53,7 +53,8 @@ def display_board
   index = input_to_index(input)
   until valid_move?(index)
     puts "Please enter 1-9:"
-    index = gets.strip
+    input = gets.strip
+    index = input_to_index(input)
   end
     player = current_player
     move(index, player = "X")
