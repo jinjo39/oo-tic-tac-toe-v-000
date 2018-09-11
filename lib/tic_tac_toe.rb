@@ -78,4 +78,19 @@ end
       return false
     end
   end
+
+  def full?
+    @board.all? {|position| position == "X" || position == "O"}
+  end
+
+  def draw?
+    if full? == true && won? == false
+      return true
+    elsif
+      full? == false && won? == false
+      return false
+    else
+      false
+    end
+  end
 end
