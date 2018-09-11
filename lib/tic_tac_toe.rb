@@ -57,7 +57,7 @@ def display_board
     index = input_to_index(input)
   end
     player = current_player
-    move(index, player = "X")
+    move(index, player)
     display_board
 end
 
