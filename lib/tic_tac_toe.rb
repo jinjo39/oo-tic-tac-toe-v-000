@@ -101,4 +101,17 @@ end
       return false
     end
   end
+
+  def winner
+    if won? == false
+      return nil
+    end
+    won?.each do |position|
+      if @board[position] == "X"
+        return "X"
+      else @board[position] == "O"
+        return "O"
+      end
+    end
+  end
 end
